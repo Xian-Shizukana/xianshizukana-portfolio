@@ -20,9 +20,6 @@ const achievements_g11_g12 = [
   "Grade 12 - CIIT Values Award in Passion - Programming"
 ];
 
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="XianShizukana Portfolio">
@@ -40,14 +37,14 @@ const achievements_g11_g12 = [
 			<article class="bg-pink-900 flex-2 p-12 flex justify-center items-center shadow-lg">
 				<p class="lg:text-2xl font-mono font-bold text-pink-50 text-justify">I build small, static websites using HTML, CSS, Tailwind, and Astro. Currently building a Linux desktop application using PyQt and Python, focusing on function rather than aesthetic. Published five games in itch.io utilizing Ren'Py and Godot. Aiming to move into AI and Cloud Development. </p>
 			</article>
-			<div class="bg-pink-300 hidden lg:flex lg:flex-1 font-mono text-justify shadow-lg">
+			<div class="bg-pink-300 hidden xl:flex lg:flex-1 font-mono text-justify shadow-lg">
 				<img src="/about-img.jpg" class="h-full w-full object-cover">
 			</div>
 		</div>
 	</section>
 
 	<!-- EDUCATION -->
-	<section class="w-full p-4 lg:px-40 lg:py-12 grid grid-cols-2 lg:grid-cols-3 gap-4 ">
+	<section class="w-full p-4 xl:px-40 xl:py-12 grid grid-cols-2 xl:grid-cols-3 gap-4 ">
 	 	<Card title="Manila Cathedral School", bullets={achievements_g10}, image="/mcs-img.jpg", date="2013-2023", isBulleted={true} />
 	 	<Card title="CIIT Senior High School", bullets={achievements_g11_g12}, image="/cshs-img.jpg" date="2023-2025", isBulleted={true} />
 	 	<Card title="CIIT College of Innovation and Integrated Technology", bullets={["Interweave Scholar"]}, image="/ccollege.png", date="2025-Present", isBulleted={true} />
