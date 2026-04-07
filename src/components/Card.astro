@@ -5,19 +5,24 @@ interface Props {
     title: string;
     date?: string;
     bullets?: string[];
+    isBulleted?: boolean;
     image?: string;
+
 }
 
-const { title = "", image = "", bullets = [], date = ""} = Astro.props;
+const { title = null, image = null, bullets = [], date = null, isBulleted = false} = Astro.props;
 ---
 
 <section class=" bg-pink-100 rounded-lg flex flex-col shadow-xl">
-    <div class="flex w-full"><img src={image} class="h-30 md:h-45 lg:h-50 rounded-lg w-full object-cover"></div>
+
+    <!-- Removes image space if none are provided -->
+    {image && (<div class="flex w-full"><img src={image} class="h-30 md:h-45 lg:h-50 rounded-lg w-full object-cover"></div>)}
     <article class="flex flex-1 flex-col p-4">
         <h1 class="font-extrabold text-md lg:text-xl">{title}</h1>
         <h2 class="font-bold text-md lg:text-xl text-pink-800 mb-4">{date}</h2>
 
-        <ul class="text-sm lg:text-lg ">
+        <!-- Adds bullet points if isBulleted is true -->
+        <ul class={`text-sm lg:text-lg ${isBulleted ? "list-disc pl-5" : ""}`}>
             {bullets.map(bullet => (<li>{bullet}</li>))}
         </ul>
     </article>

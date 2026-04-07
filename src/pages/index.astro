@@ -5,19 +5,19 @@ import Card from '../components/Card.astro';
 import '../styles/global.css';
 
 const achievements_g10 = [
-	"- Grade 10 - 1st Quarter with Honors",
-	"- Grade 10 - 2nd and 4th Quarter with High Honors",
-	"- Grade 10 - 1st to 4th Quarter Conduct Award"
+	"Grade 10 - 1st Quarter with Honors",
+	"Grade 10 - 2nd and 4th Quarter with High Honors",
+	"Grade 10 - 1st to 4th Quarter Conduct Award"
 ];
 
 const achievements_g11_g12 = [
-  "- Grade 11 - 1st - 3rd Quarter Classroom Top #1 with High Honors",
-  "- Grade 11 - Subject Proficiency in Emerging Trends and Technologies in Programming & Programming Languages 1",
-  "- Grade 11 - Subject Proficiency in Programming Languages 1",
-  "- Grade 11 - Best VFX Award in CIIT Senior Highschool Video Campaign",
-  "- Grade 12 - 1st - 3rd Quarter Classroom Top #1 with High Honors",
-  "- Grade 12 - Subject Proficiency in Introduction to IOT & Industry Readiness",
-  "- Grade 12 - CIIT Values Award in Passion - Programming"
+  "Grade 11 - 1st - 3rd Quarter Classroom Top #1 with High Honors",
+  "Grade 11 - Subject Proficiency in Emerging Trends and Technologies in Programming & Programming Languages 1",
+  "Grade 11 - Subject Proficiency in Programming Languages 1",
+  "Grade 11 - Best VFX Award in CIIT Senior Highschool Video Campaign",
+  "Grade 12 - 1st - 3rd Quarter Classroom Top #1 with High Honors",
+  "Grade 12 - Subject Proficiency in Introduction to IOT & Industry Readiness",
+  "Grade 12 - CIIT Values Award in Passion - Programming"
 ];
 
 
@@ -48,8 +48,8 @@ const achievements_g11_g12 = [
 
 	<!-- EDUCATION -->
 	<section class="w-full p-4 lg:px-40 lg:py-12 grid grid-cols-2 lg:grid-cols-3 gap-4 ">
-	 	<Card title="Manila Cathedral School", bullets={achievements_g10}, image="/mcs-img.jpg", date="2013-2023"/>
-	 	<Card title="CIIT Senior High School", bullets={achievements_g11_g12}, image="/cshs-img.jpg", date="2023-2025"/>
-	 	<Card title="CIIT College of Innovation and Integrated Technology", bullets={["- Interweave Scholar"]}, image="/ccollege.png", date="2025-Present"/>
+	 	<Card title="Manila Cathedral School", bullets={achievements_g10}, image="/mcs-img.jpg", date="2013-2023", isBulleted={true} />
+	 	<Card title="CIIT Senior High School", bullets={achievements_g11_g12}, image="/cshs-img.jpg" date="2023-2025", isBulleted={true} />
+	 	<Card title="CIIT College of Innovation and Integrated Technology", bullets={["Interweave Scholar"]}, image="/ccollege.png", date="2025-Present", isBulleted={true} />
 	</section>
 </Layout>
