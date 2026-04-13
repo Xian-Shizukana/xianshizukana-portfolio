@@ -1,6 +1,6 @@
 ---
 
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Base_Main.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css';
 
@@ -20,6 +20,17 @@ const achievements_g11_g12 = [
   "Grade 12 - CIIT Values Award in Passion - Programming"
 ];
 
+const exp_gamedev = [
+	"Developed a game titled 'Shiro’s Fantastical Website!' with a team in fulfillment of I3, Practical Research 2, and Entrepreneurship classes. This game utilized the Godot engine and GDScript language.",
+	"Served as the lead programmer for Between Two Worlds, a 3D platformer game developed in collaboration with my classmates as a hobby project. This game was released on itch.io on December 19, 2024, and utilized the Godot Engine for development.",
+	"Developed two visual novels named 'The Day That You left' and 'Passing Faces'. The games utilizes Ren'Py, a visual novel engine that uses Python. Programmed both games alone with the help of tutorials. Released on itch.io on August 12, 2023 and October 13,2024 respectively."
+];
+
+const exp_webdev = [
+	"Designed websties as part of class requirements in collaboration with a team. One project was a simple portfolio website, while the other was a website for our Attendance Monitoring System (A.M.S), where I contributed to both the front-end and back-end development.",
+	"Designed and published a retro-themed page in Neocities that serves as my personal website."
+]
+
 ---
 
 <Layout title="XianShizukana Portfolio">
@@ -35,7 +46,7 @@ const achievements_g11_g12 = [
 	<section class="w-full bg-pink-100 px-12 lg:px-64 py-12 flex flex-col" id="about">
 		<div class="flex flex-row mb-4 ">
 			<article class="bg-pink-900 flex-2 p-12 flex justify-center items-center shadow-lg">
-				<p class="lg:text-2xl font-mono font-bold text-pink-50 text-justify">I build small, static websites using HTML, CSS, Tailwind, and Astro. Currently building a Linux desktop application using PyQt and Python, focusing on function rather than aesthetic. Published five games in itch.io utilizing Ren'Py and Godot. Aiming to move into AI and Cloud Development. </p>
+				<p class="lg:text-2xl font-mono font-bold text-pink-50 text-justify">I build small, static websites using HTML, CSS, Tailwind, and Astro. Currently building a Linux desktop application using PyQt and Python. Published five games in itch.io utilizing Ren'Py and Godot. Aiming to delve into AI and Cloud Computing. </p>
 			</article>
 			<div class="bg-pink-300 hidden xl:flex lg:flex-1 font-mono text-justify shadow-lg">
 				<img src="/about-img.jpg" class="h-full w-full object-cover">
@@ -43,10 +54,22 @@ const achievements_g11_g12 = [
 		</div>
 	</section>
 
-	<!-- EDUCATION -->
-	<section class="w-full p-4 lg:p-8 xl:px-30 xl:py-12 grid grid-cols-2 xl:grid-cols-3 gap-4 bg-pink-900">
-	 	<Card title="Manila Cathedral School", bullets={achievements_g10}, image="/mcs-img.jpg", date="2013-2023", isBulleted={true} />
-	 	<Card title="CIIT Senior High School", bullets={achievements_g11_g12}, image="/cshs-img.jpg" date="2023-2025", isBulleted={true} />
-	 	<Card title="CIIT College of Innovation and Integrated Technology", bullets={["BSCS - Specialization in AI and Cloud Computing", "Interweave Scholar"]}, image="/ccollege.png", date="2025-Present", isBulleted={true} />
+	<!-- EXPERIENCES -->
+	<section class="w-full p-4 lg:p-8 xl:px-30 xl:py-12 grid grid-cols-1 gap-4 bg-pink-400">
+		<h1 class="text-3xl lg:text-5xl font-extrabold text-pink-950">Experiences</h1>
+	 	<Card title="Game Developer", list={exp_gamedev}, image="/gamedev-img.png", date="October 2022 - May 2025", isBulleted={true} />
+	 	<Card title="Web Developer", list={exp_webdev}, image="/webdev-img.png", date="January 2024 - Present", isBulleted={true} />
 	</section>
+	
+	<!-- EDUCATION -->
+	<section class="w-full p-4 lg:p-8 xl:px-30 xl:py-12  bg-pink-900">
+		<h1 class="text-3xl lg:text-5xl font-extrabold text-pink-100 mb-4">Education</h1>
+		<div class="grid grid-cols-2 xl:grid-cols-3 gap-4">
+			<Card title="Manila Cathedral School", list={achievements_g10}, image="/mcs-img.jpg", date="2013-2023", isBulleted={true} />
+			<Card title="CIIT Senior High School", list={achievements_g11_g12}, image="/cshs-img.jpg" date="2023-2025", isBulleted={true} />
+			<Card title="CIIT College of Innovation and Integrated Technology", list={["BSCS - Specialization in AI and Cloud Computing", "Interweave Scholar"]}, image="/ccollege.png", date="2025-Present", isBulleted={true} />
+		</div>
+	</section>
+
+
 </Layout>
