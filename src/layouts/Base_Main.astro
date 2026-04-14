@@ -1,6 +1,6 @@
 ---
-
 import Nav from '../components/Nav.astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -20,6 +20,7 @@ const {title = "XianShizukana Portfolio", description = "The portfolio of Sean J
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body class="min-h-screen">
 		<Nav />
