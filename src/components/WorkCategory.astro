@@ -1,0 +1,15 @@
+---
+import '../styles/global.css';
+
+interface Props{
+    link: string;
+    title: string;
+    image?: string;
+}
+
+const {link="/", title="", image="/hero-img.png"} = Astro.props;
+---
+
+<a class="block w-full p-5 lg:p-10 bg-cover text-center text-2xl lg:text-5xl font-extrabold text-pink-950 transition-transform duration-100 hover:scale-125 lg:hover:scale-110" style={`background-image: url(${image});`} href={link}>
+    <h1 transition:name="title">{title}</h1>
+</a>

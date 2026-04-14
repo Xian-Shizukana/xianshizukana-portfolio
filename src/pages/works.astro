@@ -1,18 +1,14 @@
 ---
 import Layout from '../layouts/Base_Main.astro';
+import WorkCategory from '../components/WorkCategory.astro';
 import '../styles/global.css';
 ---
 
 <Layout title="XianShizukana's Works">
-    <section class="bg-pink-400 w-screen h-screen items-center justify-center flex flex-col">
-        <a class="w-full p-5 bg-pink-50">
-            <h1>Hello!</h1>
-        </a>
-        <a class="w-full p-5 bg-pink-50" href="/">
-            <h1>Hello!</h1>
-        </a>
-        <a class="w-full p-5 bg-pink-50">
-            <h1>Hello!</h1>
-        </a>
+    <section class="bg-pink-400 w-screen h-screen items-center justify-center flex flex-col overflow-hidden">
+        <WorkCategory title="Senior High School", link="/works_shs" />
+        <WorkCategory title="College", link="/works_college" />
+        <WorkCategory title="Personal", link="/works_personal" />
+        <WorkCategory title="Other", link="/works_other" />
     </section>
 </Layout>
