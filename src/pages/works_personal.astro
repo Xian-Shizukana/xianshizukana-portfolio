@@ -1,0 +1,67 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Base_Work.astro";
+
+const btw_desc = [
+  "A 3d platformer game made in Godot wherein you have the ability to flip between two worlds. Not only was this my first game that required actual programming, but it was also my first collaboration game, as this was made by me and my classmates. Our group is currently named Haroshirace.",
+];
+
+const wondertap_desc = [
+  "A joke clicker game I made about Emu Otori and her infamous 'Wonderhoy!' Despite it being a joke game, I did implement features not present in my past game, such as saving, the utilization of classes and global variables.",
+];
+
+const mogikioku_desc = [
+  "A game heavily inspired by Yume Nikki. Take control of Kajou as you explore what is behind the 4 doors, collecting pills along the way to progress. This game is my introduction to RPGMaker, and my way of learning the ropes of the engine.",
+];
+
+const tdtyl_desc = [
+  "This is an hour long visual novel about Haruma, a college student whose childhood friend is going away for unknown reasons. This game centers on how Haruma deals with the said loss, as well as the unexpected friendship he'll build along the way. This game is created in Ren'py, a visual novel engine. It uses Python, and it was easy making the game itself. The only hard part was the writing of the story.",
+];
+
+const passingfaces_desc = [
+  "This is a ~10 minute visual novel about a man's daily life in the cafe. It entirely focuses on the people he meets at the cafe, and how he projects his own fears and doubts onto them. This visual novel was made in only 2 days. It was originally made as a showcase or demo for a workshop I spoke on, but I decided to go against it and make it into its own game.",
+];
+---
+
+<Layout title="Personal">
+  <Card
+    title="Wondertap!"
+    date="January 3, 2025"
+    list={wondertap_desc}
+    image="work-wondertap.png"
+    buttonTitle="View itch.io Page"
+    buttonLink="https://xianshizukana.itch.io/wondertap"
+  />
+  <Card
+    title="Between Two Worlds"
+    date="December 19, 2024"
+    list={btw_desc}
+    image="work-btw.png"
+    buttonTitle="View itch.io Page"
+    buttonLink="https://xianshizukana.itch.io/between-two-worlds"
+  />
+  <Card
+    title="Passing Faces"
+    date="December 4, 2024"
+    list={passingfaces_desc}
+    image="work-pf.png"
+    buttonTitle="View itch.io Page"
+    buttonLink="https://xianshizukana.itch.io/passing-faces"
+  />
+  <Card
+    title="Mogi Kioku"
+    date="August 4, 2024"
+    list={mogikioku_desc}
+    image="work-mogi.png"
+    buttonTitle="View itch.io Page"
+    buttonLink="https://xianshizukana.itch.io/mogikioku"
+  />
+  <Card
+    title="The Day That You Left"
+    date="August 12, 2023"
+    list={tdtyl_desc}
+    image="work-tdtyl.png"
+    buttonTitle="View itch.io Page"
+    buttonLink="https://xianshizukana.itch.io/thedaythatyouleft"
+  />
+</Layout>

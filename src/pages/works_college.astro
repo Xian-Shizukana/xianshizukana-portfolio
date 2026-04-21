@@ -2,15 +2,42 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Base_Work.astro";
 
-const cronos_desc = [
-  "A simple, QR Code based attendance monitoring system. Includes a filtering system to check present students on selected days. Made as part of my team's requirement for our class, Programming Languages 2.",
+const chime_desc = [
+  "CHIME is a noise monitoring system created by my group for CIIT's LRC (Learning Resource Center). If the decibel limit exceeds the adjustable threshold, it sends out an alarm and displays message stating that the library is too noisy. Made for the finals of our class, Architecture & Organization, and I worked as a programmer.",
 ];
 
-const workshop_desc = [
-  "Taught at a workshop organized by my team, C-Purasu. I spoke about the basic features of Ren'Py, and created a simple visual novel for demonstration. Spoke to Grade 11 CIIT students on the 28th as well as school visitors on the 29th of November. This was done for our class, Seminars & Workshop.",
+const uts_desc = [
+  "This website was created for the finals of my class, Understanding the Self. This website details my different types of 'self', and how they work together to make me who I am now.",
+];
+
+const portfolio_desc = [
+  "This portfolio website was created for the finals of my classes, Self Development and Introduction to Computing. This incorporated the requirements of both subjects, hence the inclusion of sections like Competence. No longer maintained as this website is now serves as my main portfolio.",
 ];
 ---
 
-<Layout title="Senior High School">
-  <section class="grid gap-4 xl:grid-cols-2"></section>
+<Layout title="College">
+  <Card
+    title="Portfolio Website"
+    date="1st Term, Year 2025-2026"
+    list={portfolio_desc}
+    image="work-portfolio.png"
+    buttonTitle="View Website"
+    buttonLink="https://shizukanaportfolio.pages.dev"
+  />
+  <Card
+    title="CHIME"
+    date="2nd Term, Year 2025-2026"
+    list={chime_desc}
+    image="work-chime.jpeg"
+    buttonTitle="View Demonstration Video"
+    buttonLink="https://youtu.be/fgXSvPeI-v0"
+  />
+  <Card
+    title="Mapping My Identity"
+    date="2nd Term, Year 2025-2026"
+    list={uts_desc}
+    image="work-uts.png"
+    buttonTitle="View Website"
+    buttonLink="https://uts-calaoagan.pages.dev"
+  />
 </Layout>
