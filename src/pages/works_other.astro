@@ -1,0 +1,29 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Base_Work.astro";
+
+const adcampaign_desc = [
+  "A video I edited for CIIT Values. This was featured alongside videos from other sections as commercial breaks during the film screenings of Grade 12 last year, and won Best VFX during the awarding ceremony. The embedded link only contains the first half of the video.",
+];
+
+const rocket_desc = [
+  "Back in 2023, me and 5 other people in my section volunteered to represent CIIT SHS for a water rocket competition. My teammate and I was placed into the accuracy category. Despite only 3 days of practice, we managed to get into 3rd place in accuracy. CIIT also won in the distance category, landing a 3rd place as well.",
+];
+---
+
+<Layout title="Others">
+  <Card
+    title="CIIT Advertisement Campaign"
+    date="December 5, 2023"
+    buttonLink="https://youtu.be/oSOTi1dhjxA?si=Xtj9dMX_7_XbuFiY"
+    buttonTitle="View Video"
+    image="work-adcampaign.png"
+    list={adcampaign_desc}
+  />
+  <Card
+    title="Rocket Competition"
+    date="February 24, 2024"
+    image="work-rocket.jpg"
+    list={rocket_desc}
+  />
+</Layout>
